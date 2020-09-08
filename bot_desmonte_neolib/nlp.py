@@ -1,5 +1,4 @@
 import spacy
-from spacy.lang import pt
 
 nlp = spacy.load('pt_core_news_md') # The model is in site-packages
 
