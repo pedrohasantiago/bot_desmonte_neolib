@@ -36,6 +36,7 @@ openssl=1.1.1g=h516909a_1
 pip=20.2.2=py38_0
 plac=0.9.6=py38_1
 preshed=3.0.2=py38h950e882_3
+pt-core-news-md=2.3.0=pypi_0
 pycparser=2.20=pyh9f0ad1d_2
 pyjwt=1.7.1=py_0
 pyopenssl=19.1.0=py_1

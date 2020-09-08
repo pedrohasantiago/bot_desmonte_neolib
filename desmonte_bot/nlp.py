@@ -1,8 +1,7 @@
 import spacy
 from spacy.lang import pt
-from pathlib import Path
 
-nlp = spacy.load(Path(__file__).parent / 'resources' / 'pt_core_news_md' / 'pt_core_news_md-2.3.0')
+nlp = spacy.load('pt_core_news_md') # The model is in site-packages
 
 def extract_target_from_tweet(phrase: str) -> str:
     doc = nlp(phrase)
