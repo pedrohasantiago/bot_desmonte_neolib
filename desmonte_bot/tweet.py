@@ -9,8 +9,18 @@ API: Final[tweepy.API] = APIWrapper().api
 tweet_parts = { # This is in global scope so it is easier to test
     'subject': 'O desmonte {target} é',
     'predicates': [
-        ('a {compl} do neoliberalismo', ('meta', 'função', 'estratégia')),
-        'o projeto neoliberal'
+        (
+            '{compl} do neoliberalismo',
+            ('a proposta', 'o objetivo', 'a meta', 'a função', 'a estratégia', 'o desígnio', 'a finalidade')
+        ),
+        (
+            '{compl} neoliberal',
+            ('o projeto', 'o programa', 'a proposta')
+        ),
+        (
+            '{compl} o neoliberalismo',
+            ('o que inspira', 'o que move', 'o que quer', 'o que deseja')
+        )
     ]
 }
 
