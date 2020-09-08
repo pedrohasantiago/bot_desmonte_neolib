@@ -13,7 +13,8 @@ class TestNLP(TestCase):
             'É grave o desmonte dos recursos naturais da Amazônia, é muito grave!': 'dos recursos naturais da Amazônia',
             'Quando vamos prestar atenção no desmonte do parque industrial de Manaus?': 'do parque industrial de Manaus',
             'É inacreditável o desmonte da educação pública, gratuita e de qualidade': 'da educação pública, gratuita e de qualidade',
-            'O desmonte da Lava-Jato fará muito mal ao país nos próximos anos': 'da Lava-Jato'
+            'O desmonte da Lava-Jato fará muito mal ao país nos próximos anos': 'da Lava-Jato',
+            'A cada heroi absurdo apresentado, uma gritaria medonha enquanto passa no congresso o desmonte do serviço público e a entrega das estatais.': 'do serviço público'
         }
         for phrase, target in phrases_and_targets.items():
             r = nlp.extract_target_from_tweet(phrase)
