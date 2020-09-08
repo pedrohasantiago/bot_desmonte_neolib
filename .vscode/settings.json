@@ -1,0 +1,6 @@
+{
+    "python.pythonPath": "~/.anaconda3/envs/desmonte_bot",
+    "python.analysis.extraPaths": [
+        "desmonte_bot"
+    ]
+}
