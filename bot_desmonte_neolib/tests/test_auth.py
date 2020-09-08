@@ -16,7 +16,8 @@ class TestAuth(TestCase):
             self.assertIsInstance(auth._get_environment_var(required_var), str)
         # Tesing return value
         mocked_val = 'mocked_env_val'
-        with patch('desmonte_bot.auth.getenv', return_value=mocked_val):
+        auth_path = __package__.split('.')[0] + '.auth'
+        with patch(f'{auth_path}.getenv', return_value=mocked_val):
             self.assertEqual(auth._get_environment_var('anything'), mocked_val)
 
     def test_api(self):
