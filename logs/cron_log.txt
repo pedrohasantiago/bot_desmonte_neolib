@@ -1,1 +1,0 @@
-/bin/bash: /home/pedro/Documentswhi/Code/Side projects/desmonte_neoliberal_bot/run.sh: No such file or directory
