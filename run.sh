@@ -1,13 +1,13 @@
 #!/bin/bash
 
-source ~/.anaconda3/etc/profile.d/conda.sh
+source ~/miniconda3/etc/profile.d/conda.sh
 conda activate desmonte_bot
 
 THIS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 cd "$THIS_DIR" # Else, the bot_demsonte_neolib module won't be found
 
 if [ "$1" == "test" ]; then
-    python -m unittest discover
+    python3 -m unittest discover
 else
-    python -m bot_desmonte_neolib &> logs/log.txt  
+    python3 -m bot_desmonte_neolib &> logs/log.txt  
 fi
