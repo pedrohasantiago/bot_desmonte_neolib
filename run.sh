@@ -9,5 +9,5 @@ cd "$THIS_DIR" # Else, the bot_demsonte_neolib module won't be found
 if [ "$1" == "test" ]; then
     python -m unittest discover
 else
-    python -m bot_desmonte_neolib &> log.txt  
+    python -m bot_desmonte_neolib &> logs/log.txt  
 fi
