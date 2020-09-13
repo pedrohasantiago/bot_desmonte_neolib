@@ -38,7 +38,10 @@ def iter_target_from_all_tweets() -> Iterator[str]:
     """First searches in recent tweets only, than in all tweets."""
     for boolean in (True, False):
         for tweet in iter_desmonte_tweets(since_last_own_tweet=boolean):
-            yield nlp.extract_target_from_tweet(tweet.full_text)
+            try:
+                yield nlp.extract_target_from_tweet(tweet.full_text)
+            except nlp.NoRightChildrenError:
+                continue
 
 def has_bot_tweeted_this(desmonte_target: str) -> bool:
     results = API.search(f'"{desmonte_target}" {queries["from_bot"]}')
