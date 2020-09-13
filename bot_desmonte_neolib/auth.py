@@ -65,7 +65,8 @@ class AuthHandler:
         self.auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
         if not access_token or not access_token_secret:
             self.get_access_token()
-        self.auth.set_access_token(access_token, access_token_secret)
+        else:
+            self.auth.set_access_token(access_token, access_token_secret)
 
     def get_auth_url(self) -> str:
         try:
@@ -91,6 +92,7 @@ class AuthHandler:
               f'ACCESS_TOKEN: {self.auth.access_token}',
               f'ACCESS_TOKEN_SECRET: {self.auth.access_token_secret}',
               sep='\n')
+        input('Press ENTER to continue...')
 
 if __name__ == "__main__":
     APIWrapper(env_has_access_token=False).api
