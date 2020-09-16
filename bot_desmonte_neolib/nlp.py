@@ -12,7 +12,7 @@ def extract_target_from_tweet(phrase: str) -> str:
             target_token = token
             break
     else:
-        raise Exception('"Broken" not found in input')
+        raise Exception('"desmonte" not found in input')
     # We only want the subtree that's the closest to "desmonte"
     # (ie, the first one to the right of it)
     rights = list(target_token.rights)
